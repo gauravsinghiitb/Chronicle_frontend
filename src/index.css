@@ -1,0 +1,73 @@
+/* Import Oswald Font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
+
+:root {
+  /* --- LIGHT MODE --- */
+  --bg-color: #e8e8e8;
+  --text-primary: #111111;
+  --text-secondary: #555555;
+  
+  /* EDITOR VARS */
+  --page-bg: rgba(255, 255, 255, 0.65);
+  --page-border: rgba(255, 255, 255, 0.8);
+  
+  --header-bg: rgba(255, 255, 255, 0.5);
+  --header-border: rgba(255, 255, 255, 0.4);
+  
+  --text-editor: #111111;
+  
+  --spotlight-color: rgba(255, 255, 255, 0.5);
+  
+  --switch-track: #ccc;
+  --switch-track-active: #000;
+  --switch-knob: #fff;
+  
+  /* FONTS */
+  --font-title: 'Oswald', sans-serif; 
+  --font-body: 'Inter', sans-serif;
+}
+
+/* --- DARK MODE --- */
+[data-theme="dark"] {
+  --bg-color: #050505;
+  --text-primary: #ffffff;
+  --text-secondary: #999999;
+  
+  --page-bg: rgba(20, 20, 20, 0.6);
+  --page-border: rgba(255, 255, 255, 0.1);
+  
+  --header-bg: rgba(30, 30, 30, 0.5);
+  --header-border: rgba(255, 255, 255, 0.1);
+  
+  --text-editor: #eeeeee;
+  
+  --spotlight-color: rgba(255, 255, 255, 0.1);
+  
+  --switch-track: #333;
+  --switch-track-active: #fff;
+  --switch-knob: #000;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* SPOTLIGHT CANVAS */
+.spotlight-canvas {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none; z-index: -1;
+}
+
+.ghost-text {
+  color: var(--text-secondary);
+  opacity: 0.5;
+  font-style: italic;
+}
