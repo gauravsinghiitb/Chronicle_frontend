@@ -9,7 +9,7 @@ const MODELS = [
 ];
 
 export const requestAI = async (text: string, mode: "continue" | "complete" = "continue"): Promise<string> => {
-  const key = API_KEY || "AIzaSyDuw5_i7h--CfdEEtDH7l0FXAl-Xs0MHho";
+  const key = API_KEY;
   
   // 1. IMPROVED PROMPT: Let AI decide length naturally
   let prompt = "";
